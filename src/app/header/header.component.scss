@@ -1,0 +1,24 @@
+@import '../../styles.scss';
+
+header {
+    box-shadow: 0px 4px 7px 0px #02183240;
+}
+
+.selected {
+    @extend .parallelogram-animated;
+    &::after{
+        background-color: #9d75a2a6 !important;
+    }
+}
+
+ul > li {
+    transition: .5s;
+    &:hover{
+        @extend .parallelogram-animated;
+
+        &::after{
+            background-color: #cba4d082;
+        }
+    }
+}
+

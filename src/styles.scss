@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+html, body{
+	height: 100%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$base-color: #FEF7F7;
+$obj-color: #F3DFDF;
+$emphasis-color: #391201;
+
+.base-color{
+    background-color: $base-color;
+}
+
+.obj-color{
+    background-color: $obj-color;
+}
+
+.emphasis-color{
+    background-color: $emphasis-color;
+}
+
+.font{
+	color: $emphasis-color;
+}
+
+.parallelogram, .parallelogram-animated {
+	position: relative !important;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		width: 120%;
+		height: 55%;
+		bottom: 0px;
+		transform: skew(30deg) translateX(-50%);
+		background: #f5dede99;
+		transition: .35s ease-in;
+	}
+}
+
+.parallelogram-animated::after {
+	animation: parallelogram-animate .35s forwards;
+}
+
+@keyframes parallelogram-animate {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 120%;
+	}
+}
