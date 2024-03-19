@@ -52,6 +52,13 @@ $emphasis-color: #391201;
 	animation: parallelogram-animate .35s forwards;
 }
 
+.hover-animation {
+	transition: .25s ease-in;
+	&:hover{
+		transform: translateY(-3%) scale(1.005);
+	}
+}
+
 @keyframes parallelogram-animate {
 	from {
 		width: 0px;
